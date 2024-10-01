@@ -9,9 +9,18 @@ namespace MolecularLibTests.Scripts.Polymorphic
     {
         public PolymorphicVariable<Animal> animalVariable;
 
+        public bool debugger = false;
         private void Update()
         {
+            if (debugger) return;
+            
             animalVariable.Value.MakeSound();
+            Debug.Log(animalVariable.ValueType);
+            Debug.Log(animalVariable.SelectedPolymorphicType);
+            
+            if(animalVariable.As<Dog>(out var createdDog))
+                createdDog.MakeSound();
+
         }
     }
     
