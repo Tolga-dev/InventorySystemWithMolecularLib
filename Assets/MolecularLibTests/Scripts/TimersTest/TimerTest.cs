@@ -1,11 +1,12 @@
+using MolecularLib;
 using MolecularLib.Timers;
 using UnityEngine;
 
 namespace MolecularLibTests.Scripts.TimersTest
 {
-    public class TimerTest : MonoBehaviour
+    public class TimerTest : AutoSingleton<TimerTest>
     {
-        public float duration;
+        public float duration = 0.2f;
 
         private void Start()
         {

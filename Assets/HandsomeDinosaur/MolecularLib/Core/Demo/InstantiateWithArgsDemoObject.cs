@@ -20,5 +20,5 @@ namespace MolecularLib.Demo
             myString = str;
             stringText.text = myString;
         }
-    }
+    }   
 }
