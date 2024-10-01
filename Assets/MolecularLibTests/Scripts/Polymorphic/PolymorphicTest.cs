@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace MolecularLibTests.Scripts.Polymorphic
 {
-    public class Polymorphic : MonoBehaviour
+    public class PolymorphicTest : MonoBehaviour
     {
         public PolymorphicVariable<Animal> animalVariable;
 
