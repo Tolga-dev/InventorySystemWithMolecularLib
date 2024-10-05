@@ -2,6 +2,7 @@ using System;
 using InventorySystem.Scripts;
 using UnityEditor;
 using UnityEngine;
+using UniversalInventorySystem.Editors;
 
 namespace InventorySystem.Editor
 {
@@ -44,8 +45,11 @@ namespace InventorySystem.Editor
                 }
                 BackTab();
             }
-
-
+            
+            if (GUILayout.Button("Open Editor"))
+            {
+                ItemDateEditorWindow.Open((ItemDataBase)target);
+            }
             serializedObject.ApplyModifiedProperties();
         }
 

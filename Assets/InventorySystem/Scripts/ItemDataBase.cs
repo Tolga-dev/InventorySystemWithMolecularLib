@@ -9,7 +9,7 @@ namespace InventorySystem.Scripts
     public class ItemDataBase : ScriptableObject
     {
         public string dataBaseName;
-        public string dataBaseId;
+        public int dataBaseId;
         
         public List<Item> itemList = new List<Item>();
 
