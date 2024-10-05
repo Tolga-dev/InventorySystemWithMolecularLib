@@ -1,4 +1,9 @@
-item data base butonlu
+pattern group
 
-pattern data base = li olacak
+inventory
+	altta ui da gozukucek statik
+
+basit craft sistemi
+	yukarda, ui da gozukucek statik
+	
 
