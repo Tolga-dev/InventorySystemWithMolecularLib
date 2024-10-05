@@ -15,15 +15,16 @@ This framework is designed to help game developers manage and manipulate invento
 - Integration with the Molecular Library
 
 ## Sample Images
-
-<img src="GitAsset/1.png" alt="Image 1" width="200" height="200">
-<img src="GitAsset/2.png" alt="Image 2" width="200" height="200">
-<img src="GitAsset/3.png" alt="Image 3" width="200" height="200">
-<img src="GitAsset/4.png" alt="Image 4" width="200" height="200">
-<img src="GitAsset/5.png" alt="Image 5" width="200" height="200">
-<img src="GitAsset/6.png" alt="Image 6" width="200" height="200">
-<img src="GitAsset/7.png" alt="Image 7" width="200" height="200">
-<img src="GitAsset/8.png" alt="Image 8" width="200" height="200">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+    <img src="GitAsset/1.png" alt="Image 1" width="200" height="200">
+    <img src="GitAsset/2.png" alt="Image 2" width="200" height="200">
+    <img src="GitAsset/3.png" alt="Image 3" width="200" height="200">
+    <img src="GitAsset/4.png" alt="Image 4" width="200" height="200">
+    <img src="GitAsset/5.png" alt="Image 5" width="200" height="200">
+    <img src="GitAsset/6.png" alt="Image 6" width="200" height="200">
+    <img src="GitAsset/7.png" alt="Image 7" width="200" height="200">
+    <img src="GitAsset/8.png" alt="Image 8" width="200" height="200">
+</div>
 
 ## Getting Started
 
