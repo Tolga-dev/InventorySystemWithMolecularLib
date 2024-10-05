@@ -3,7 +3,6 @@ using InventorySystem.Core;
 using InventorySystem.Scripts;
 using UnityEditor;
 using UnityEngine;
-using UniversalInventorySystem.Editors;
 
 namespace InventorySystem.Editor
 {

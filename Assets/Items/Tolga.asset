@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 1
   itemName: Tolga
   description: sadasd
-  icon: {fileID: -2276342835723864672, guid: 76989e9c2eb59ec418488253b8dd6ec6, type: 3}
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isStackable: 1
   maxStackSize: 10
   isConsumable: 1
