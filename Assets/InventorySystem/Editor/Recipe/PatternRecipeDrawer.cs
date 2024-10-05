@@ -119,5 +119,6 @@ namespace InventorySystem.Editor
                 }
             }
         }
+        
     }
 }
