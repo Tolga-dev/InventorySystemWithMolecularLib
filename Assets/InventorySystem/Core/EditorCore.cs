@@ -3,20 +3,11 @@ using UnityEngine;
 
 namespace InventorySystem.Core
 {
-    public static class EditorCore
+    public class EditorCore : Editor
     {
-        public static void Separator()
-        {
-            EditorGUILayout.Separator();
-        }
+        public void IncreaseIndent() => EditorGUI.indentLevel++;
+        public void DecreaseIndent() => EditorGUI.indentLevel--;
 
-        public static void AddTab()
-        {
-            EditorGUI.indentLevel++;
-        }
-        public static void BackTab()
-        {
-            EditorGUI.indentLevel--;
-        }
+        public void Separator() => EditorGUILayout.Separator();
     }
 }

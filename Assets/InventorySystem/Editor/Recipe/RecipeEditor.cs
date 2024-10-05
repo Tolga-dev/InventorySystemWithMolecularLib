@@ -1,4 +1,5 @@
 using System;
+using InventorySystem.Core;
 using InventorySystem.Scripts;
 using UnityEditor;
 using UnityEngine;
@@ -6,32 +7,32 @@ using UnityEngine;
 namespace InventorySystem.Editor
 {
     [CustomEditor(typeof(Recipe), true)]
-    public class RecipeEditor : UnityEditor.Editor
+    public class RecipeEditor : EditorCore
     {
-        private SerializedProperty recipeName;
-        private SerializedProperty recipeId;
+        private SerializedProperty _recipeName;
+        private SerializedProperty _recipeId;
 
-        private SerializedProperty numberOfEnteredItems;
-        private SerializedProperty enteredItems;
-        private SerializedProperty amountOfEnteredItems;
+        private SerializedProperty _numberOfEnteredItems;
+        private SerializedProperty _enteredItems;
+        private SerializedProperty _amountOfEnteredItems;
 
-        private SerializedProperty numberOfProducedItems;
-        private SerializedProperty producedItems;
-        private SerializedProperty amountOfProducedItems;
+        private SerializedProperty _numberOfProducedItems;
+        private SerializedProperty _producedItems;
+        private SerializedProperty _amountOfProducedItems;
 
 
         private void OnEnable()
         {
-            recipeId = serializedObject.FindProperty("recipeId");
-            recipeName = serializedObject.FindProperty("recipeName");
+            _recipeId = serializedObject.FindProperty("recipeId");
+            _recipeName = serializedObject.FindProperty("recipeName");
             
-            numberOfEnteredItems = serializedObject.FindProperty("numberOfEnteredItems");
-            enteredItems = serializedObject.FindProperty("enteredItems");
-            amountOfEnteredItems = serializedObject.FindProperty("amountOfEnteredItems");
+            _numberOfEnteredItems = serializedObject.FindProperty("numberOfEnteredItems");
+            _enteredItems = serializedObject.FindProperty("enteredItems");
+            _amountOfEnteredItems = serializedObject.FindProperty("amountOfEnteredItems");
             
-            amountOfProducedItems = serializedObject.FindProperty("amountOfProducedItems");
-            producedItems = serializedObject.FindProperty("producedItems");
-            numberOfProducedItems = serializedObject.FindProperty("numberOfProducedItems");
+            _amountOfProducedItems = serializedObject.FindProperty("amountOfProducedItems");
+            _producedItems = serializedObject.FindProperty("producedItems");
+            _numberOfProducedItems = serializedObject.FindProperty("numberOfProducedItems");
         }
 
         public override void OnInspectorGUI()
@@ -42,10 +43,10 @@ namespace InventorySystem.Editor
             DrawRecipeDatabaseFields();
 
             // Draw Entered Items Section
-            DrawItemsSection("Input Items", numberOfEnteredItems, enteredItems, amountOfEnteredItems);
+            DrawItemsSection("Input Items", _numberOfEnteredItems, _enteredItems, _amountOfEnteredItems);
 
             // Draw Produced Items Section
-            DrawItemsSection("Produced Items", numberOfProducedItems, producedItems, amountOfProducedItems);
+            DrawItemsSection("Produced Items", _numberOfProducedItems, _producedItems, _amountOfProducedItems);
 
             // Draw Recipe Visualization
             DrawRecipeVisualization();
@@ -55,8 +56,8 @@ namespace InventorySystem.Editor
 
         private void DrawRecipeDatabaseFields()
         {
-            EditorGUILayout.PropertyField(recipeId, new GUIContent("Data Base Id"));
-            EditorGUILayout.PropertyField(recipeName, new GUIContent("Data Base Name"));
+            EditorGUILayout.PropertyField(_recipeId, new GUIContent("Data Base Id"));
+            EditorGUILayout.PropertyField(_recipeName, new GUIContent("Data Base Name"));
         }
 
         private void DrawItemsSection(string label, SerializedProperty itemCount, SerializedProperty items, SerializedProperty amounts)
@@ -100,13 +101,13 @@ namespace InventorySystem.Editor
             EditorGUILayout.BeginHorizontal("box", GUILayout.ExpandWidth(true));
 
             // Display entered items
-            DisplayItems(enteredItems, amountOfEnteredItems, "Null", "+");
+            DisplayItems(_enteredItems, _amountOfEnteredItems, "Null", "+");
 
             // Display equals sign
             EditorGUILayout.LabelField("=", GUILayout.Height(36), GUILayout.Width(36));
 
             // Display produced items
-            DisplayItems(producedItems, amountOfProducedItems, "Null", string.Empty);
+            DisplayItems(_producedItems, _amountOfProducedItems, "Null", string.Empty);
 
             EditorGUILayout.EndHorizontal();
         }
@@ -138,9 +139,6 @@ namespace InventorySystem.Editor
             }
         }
 
-        private void IncreaseIndent() => EditorGUI.indentLevel++;
-        private void DecreaseIndent() => EditorGUI.indentLevel--;
-
-        private void Separator() => EditorGUILayout.Separator();
+        
     }
 }

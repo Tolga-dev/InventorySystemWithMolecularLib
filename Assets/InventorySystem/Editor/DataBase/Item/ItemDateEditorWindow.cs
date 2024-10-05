@@ -7,21 +7,13 @@ namespace InventorySystem.Editor
 {
     public class ItemDateEditorWindow : UserEditorWindow
     {
-        public SerializedObject serializedObject;
-        public SerializedProperty currentProperty;
-
         public Vector2 sideBar;
         public Vector2 contentBar;
-
-        private string selectedPropertyPath;
-        protected SerializedProperty selectedProperty;
-        protected bool showItemAssets;
 
         public static void Open(ItemDataBase target)
         {
             var window = GetWindow<ItemDateEditorWindow>("Item Data Base Editor");
             window.serializedObject = new SerializedObject(target);
-
         }
 
         private void OnGUI()
@@ -77,7 +69,7 @@ namespace InventorySystem.Editor
             serializedObject.ApplyModifiedProperties();
         }
 
-        protected void DrawSidebar(SerializedProperty prop)
+        private void DrawSidebar(SerializedProperty prop)
         {
             if (GUILayout.Button("Item Asset"))
             {

@@ -8,7 +8,7 @@ using UniversalInventorySystem.Editors;
 namespace InventorySystem.Editor
 {
     [CustomEditor(typeof(ItemDataBase), true)]
-    public class ItemDataBaseEditor : UnityEditor.Editor
+    public class ItemDataBaseEditor : EditorCore
     {
         public SerializedProperty itemList;
         public SerializedProperty dataBaseName;
@@ -29,13 +29,13 @@ namespace InventorySystem.Editor
             EditorGUILayout.PropertyField(dataBaseId);
             EditorGUILayout.PropertyField(dataBaseName);
 
-            EditorCore.Separator();
+            Separator();
             
             itemList.isExpanded = EditorGUILayout.Foldout(itemList.isExpanded, new GUIContent("Item List"), true);
             
             if (itemList.isExpanded)
             {
-                EditorCore.AddTab();
+                IncreaseIndent();
 
                 itemList.arraySize = EditorGUILayout.IntField(new GUIContent("Size"), itemList.arraySize);
 
@@ -66,7 +66,7 @@ namespace InventorySystem.Editor
                 {
                     itemList.arraySize++; // Increase the size of the array
                 }
-                EditorCore.BackTab();
+                DecreaseIndent();
             }
             
             if (GUILayout.Button("Open Editor"))
