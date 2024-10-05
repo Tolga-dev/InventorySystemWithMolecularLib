@@ -8,8 +8,6 @@ namespace InventorySystem.Editor
 {
     public class PatternRecipeEditorWindow : UserEditorWindow
     {
-        public SerializedObject serializedObject;
-        public SerializedProperty currentProperty;
 
         bool patternRecipe = true;
         bool patternConfg = false;
