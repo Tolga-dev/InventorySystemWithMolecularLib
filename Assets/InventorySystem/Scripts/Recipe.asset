@@ -9,11 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15542b120d3d49a48c9439f1025ff3c2, type: 3}
-  m_Name: ItemDataBase
+  m_Script: {fileID: 11500000, guid: 8b350751beb048dcb362ca772f268988, type: 3}
+  m_Name: Recipe
   m_EditorClassIdentifier: 
-  dataBaseName: 
-  dataBaseId: 
-  itemList:
+  recipeId: 1
+  recipeName: A
+  numberOfEnteredItems: 2
+  enteredItems:
   - {fileID: 11400000, guid: 422b309c8e8fe6294a9b5c28a74714ab, type: 2}
   - {fileID: 11400000, guid: 422b309c8e8fe6294a9b5c28a74714ab, type: 2}
+  amountOfEnteredItems: 0100000002000000
+  numberOfProducedItems: 1
+  producedItems:
+  - {fileID: 11400000, guid: 422b309c8e8fe6294a9b5c28a74714ab, type: 2}
+  amountOfProducedItems: 02000000

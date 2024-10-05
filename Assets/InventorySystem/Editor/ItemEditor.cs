@@ -68,7 +68,7 @@ namespace InventorySystem.Editor
             {
                 AddTab();
                 
-                isConsumable.boolValue = EditorGUILayout.Toggle(new GUIContent("Is Stackable"), isConsumable.boolValue);
+                isConsumable.boolValue = EditorGUILayout.Toggle(new GUIContent("Is Consumable"), isConsumable.boolValue);
                 
                 if (isConsumable.boolValue)
                 {

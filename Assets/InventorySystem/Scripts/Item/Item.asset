@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 1
   itemName: asds
   description: sadasd
-  icon: {fileID: -8299567313919708587, guid: 14da6ce6e6b9b9841ade0ba37558923d, type: 3}
+  icon: {fileID: -2276342835723864672, guid: 76989e9c2eb59ec418488253b8dd6ec6, type: 3}
   isStackable: 1
   maxStackSize: 1
   isConsumable: 1
