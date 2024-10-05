@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 namespace InventorySystem.Scripts
@@ -18,10 +19,6 @@ namespace InventorySystem.Scripts
         [Header("Consumable")]
         public bool isConsumable;
         public int maxUsesInOnceTime;
-        
-        
-        
-        
         
     }
 }

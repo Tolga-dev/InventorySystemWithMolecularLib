@@ -1,4 +1,5 @@
 using System;
+using InventorySystem.Core;
 using InventorySystem.Scripts;
 using UnityEditor;
 using UnityEngine;
@@ -25,17 +26,16 @@ namespace InventorySystem.Editor
         {
             serializedObject.Update();
 
-
             EditorGUILayout.PropertyField(dataBaseId);
             EditorGUILayout.PropertyField(dataBaseName);
 
-            Separator();
+            EditorCore.Separator();
             
             itemList.isExpanded = EditorGUILayout.Foldout(itemList.isExpanded, new GUIContent("Item List"), true);
             
             if (itemList.isExpanded)
             {
-                AddTab();
+                EditorCore.AddTab();
 
                 itemList.arraySize = EditorGUILayout.IntField(new GUIContent("Size"), itemList.arraySize);
 
@@ -52,7 +52,7 @@ namespace InventorySystem.Editor
                         var item = itemList.GetArrayElementAtIndex(i).objectReferenceValue;
                         if (item != null)
                         {
-                            string assetPath = AssetDatabase.GetAssetPath(item);
+                            var assetPath = AssetDatabase.GetAssetPath(item);
                             AssetDatabase.DeleteAsset(assetPath);
                         }
                         
@@ -66,7 +66,7 @@ namespace InventorySystem.Editor
                 {
                     itemList.arraySize++; // Increase the size of the array
                 }
-                BackTab();
+                EditorCore.BackTab();
             }
             
             if (GUILayout.Button("Open Editor"))
@@ -76,18 +76,6 @@ namespace InventorySystem.Editor
             serializedObject.ApplyModifiedProperties();
         }
 
-        private void Separator()
-        {
-            EditorGUILayout.Separator();
-        }
-
-        private void AddTab()
-        {
-            EditorGUI.indentLevel++;
-        }
-        private void BackTab()
-        {
-            EditorGUI.indentLevel--;
-        }
+        
     }
 }

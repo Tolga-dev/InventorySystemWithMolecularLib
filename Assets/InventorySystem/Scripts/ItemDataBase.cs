@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace InventorySystem.Scripts
@@ -12,22 +13,17 @@ namespace InventorySystem.Scripts
         public int dataBaseId;
         
         public List<Item> itemList = new List<Item>();
+        public Item GetItemAtIndex(int index) { return itemList[index]; }
 
         public Item GetItemWithName(string itemName)
         {
-            foreach (var items in itemList)
-            {
-                if (items.name == itemName)
-                    return items;
-            }
-            
-            return null;
+            return itemList.FirstOrDefault(items => items.name == itemName);
         }
-
-        public void SortItems()
+        public Item GetItemWithID(int id)
         {
-            itemList.Sort();
+            return itemList.FirstOrDefault(i => i.id == id);
         }
+        
         
     }
 }
