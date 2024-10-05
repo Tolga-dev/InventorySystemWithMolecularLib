@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75ec3361da274b928e433b5fb104dfe8, type: 3}
-  m_Name: Item
+  m_Name: Poop
   m_EditorClassIdentifier: 
-  id: 1
-  itemName: asds
-  description: sadasd
-  icon: {fileID: -2276342835723864672, guid: 76989e9c2eb59ec418488253b8dd6ec6, type: 3}
+  id: 0
+  itemName: sd
+  description: asd
+  icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   isStackable: 1
-  maxStackSize: 1
+  maxStackSize: 10
   isConsumable: 1
-  maxUsesInOnceTime: 0
+  maxUsesInOnceTime: 10

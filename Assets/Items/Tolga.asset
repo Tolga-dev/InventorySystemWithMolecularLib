@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75ec3361da274b928e433b5fb104dfe8, type: 3}
-  m_Name: HiKitty
+  m_Name: Tolga
   m_EditorClassIdentifier: 
   id: 1
-  itemName: HiKitty
-  description: Anan
-  icon: {fileID: 0}
+  itemName: Tolga
+  description: sadasd
+  icon: {fileID: -2276342835723864672, guid: 76989e9c2eb59ec418488253b8dd6ec6, type: 3}
   isStackable: 1
   maxStackSize: 10
   isConsumable: 1
-  maxUsesInOnceTime: 31
+  maxUsesInOnceTime: 0

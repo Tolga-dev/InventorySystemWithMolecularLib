@@ -16,4 +16,4 @@ MonoBehaviour:
   dataBaseId: 1453
   itemList:
   - {fileID: 11400000, guid: 422b309c8e8fe6294a9b5c28a74714ab, type: 2}
-  - {fileID: 11400000, guid: 422b309c8e8fe6294a9b5c28a74714ab, type: 2}
+  - {fileID: 11400000, guid: 2f486e4e52147d51380e450cb1676d27, type: 2}

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7f81e4f0ff40af8f7caacae6c26d4b, type: 3}
+  m_Name: PatternRecipe
+  m_EditorClassIdentifier: 
+  numberOfFactors: 2
+  factors:
+  - {fileID: 11400000, guid: 422b309c8e8fe6294a9b5c28a74714ab, type: 2}
+  - {fileID: 11400000, guid: 2f486e4e52147d51380e450cb1676d27, type: 2}
+  numberOfProducts: 1
+  products:
+  - {fileID: 11400000, guid: 2f486e4e52147d51380e450cb1676d27, type: 2}
+  amountProducts: 01000000
+  gridSize: {x: 2, y: 2}
+  pattern:
+  - {fileID: 11400000, guid: 2f486e4e52147d51380e450cb1676d27, type: 2}
+  - {fileID: 11400000, guid: 422b309c8e8fe6294a9b5c28a74714ab, type: 2}
+  - {fileID: 11400000, guid: 422b309c8e8fe6294a9b5c28a74714ab, type: 2}
+  - {fileID: 0}
+  amountPattern: 01000000010000000100000001000000
+  id: 0
+  key: 

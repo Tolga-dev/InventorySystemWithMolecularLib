@@ -41,7 +41,30 @@ namespace InventorySystem.Editor
 
                 for (int i = 0; i < itemList.arraySize; i++)
                 {
+                    EditorGUILayout.BeginHorizontal();
+            
+                    // Object field for each item
                     EditorGUILayout.ObjectField(itemList.GetArrayElementAtIndex(i), new GUIContent($"Item {i}"));
+
+                    // Button to remove the item
+                    if (GUILayout.Button("Remove", GUILayout.Width(60)))
+                    {
+                        var item = itemList.GetArrayElementAtIndex(i).objectReferenceValue;
+                        if (item != null)
+                        {
+                            string assetPath = AssetDatabase.GetAssetPath(item);
+                            AssetDatabase.DeleteAsset(assetPath);
+                        }
+                        
+                        itemList.DeleteArrayElementAtIndex(i); // Remove the item at index i
+                    }
+
+                    EditorGUILayout.EndHorizontal();
+                }
+
+                if (GUILayout.Button("Add New Item"))
+                {
+                    itemList.arraySize++; // Increase the size of the array
                 }
                 BackTab();
             }
